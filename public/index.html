@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinhalaConvert.lk</title>
+    <!-- <link rel="stylesheet" href="./css/main_style.css"> -->
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+    <div class="SinhalaconvertLk">
+
+        <div class="MainBackground"></div>
+
+        <div class="NavBar">
+            <img class="Logo" src="img/logo.png" alt="Logo" />
+            <div class="NavItem">
+                <a href="index.html" class="Home">Home</a>
+                <a href="support.html" class="Support">Support</a>
+                <a href="aboutus.html" class="Aboutus">About us</a>
+                <a href="contact.html" class="Contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="HeroDiv1">
+            <div class="HeroHeading1">
+                <div class="ImageToSinhalaTextConverter">
+                    <span>Image To Sinhala <br/></span>
+                    <span>Text Converter</span>
+                </div>
+            </div>
+            <div class="HeroHeading2">With Support For Multiple Font And Unicode</div>
+            <div class="UploadImgBtn">
+                <div class="Camera">
+                    <div class="Vector"></div>
+                    <div class="Vector"></div>
+                </div>
+
+                <input type="file" id="upimg" hidden/>
+                <label for="upimg" class="UploadImage">Upload Image</label>
+                <span class="UploadImage_f" id="fileimg">No file chosen</span>
+
+            </div>
+            <div class="ConvertBtn" id="cbtn">
+                <div class="Convert">Convert</div>
+            </div>
+        </div>
+
+        <div class="HeroDiv2">
+
+            <a href="#" class="UnicodeBtn"> <div class="Unicode">Unicode Font</div> </a>
+
+            <a href="#" class="LegacyBtn"> <div class="Legacy">Legacy Font</div> </a>
+            <div class="selectedmenu">
+            <select id="fontSelect" name="fontSelect">
+                    <option value="0">Select a font style:</option>
+                    <option value="FMMalithi">FMMalithi</option>
+                    <option value="FMsandhyani">FMsandhyani</option>
+                    <option value="FmSamantha">FmSamantha</option>
+                    <option value="Iskolephotha">Iskolephotha</option>
+                    <option value="FMgamunu">FMgamunu</option>
+                    <option value="FmAbhaya">FmAbhaya</option>
+                    <option value="FmBasuru">FmBasuru</option>
+                    <option value="FmBindumathi">FmBindumathi</option>
+                    <option value="FmDerana">FmDerana</option>
+                    <option value="FmGanganee">FmGanganee</option>
+                    <option value="FmRashmee">FmRashmee</option>
+                </select>
+            </div>
+
+            <div class="HeroDiv2Bg1">
+
+                <div class="HeroDiv2Bg2">
+                    <textarea class="textarea" id="Checkbox11" name="Checkbox1" rows="25%" cols="100%">සිනහලෙස්සැදිමිලකැදදිමිලක</textarea>
+                </div>
+
+                <!-- Progress bar container -->
+                <div class="progress-container" id="progress-container" style="display: none;">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                
+
+                <a href="#" class="VoiceBtn"> 
+                    <img src="img/microphone.svg" class="Voice" alt="Voice"> 
+                    <div class="Base2"></div> 
+                </a>
+
+                <div class="gifContainer">
+                    <img src="./img/thinking-question-mark.gif" class="listeningGif" id="listeningGif" alt="Listening">
+                    <img src="./img/craftykaname-annika-kaname.gif" class="speakingGif" id="speakingGif" alt="Speaking">
+                </div>
+
+                <a href="#" class="SpeakerBtn" id="speakBtn"> <img src="img/volume.svg" class="Volume" alt="Volume"> <div class="Base1"> </div> </a>
+                <a href="#" class="CopyBtn" id="copyBtn"> <div class="CopyText">Copy Text</div> </a>
+                <a href="#" class="ClearBtn" id="clearBtn"> <div class="ClearAll">Clear All</div> </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+
+    <script src="./js/voice.js"></script>
+    <script src="./js/copyandclear.js"></script>
+
+    <script src="./js/selectmenu.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/TextDetect.js"></script>
+    <script src="./js/fontchange.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+</body>
+</html>
